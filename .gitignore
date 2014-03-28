@@ -18,4 +18,6 @@ doc/
 .DS_Store
 .idea
 .secret
+.sublime_project
+.sublime_workspace
 vendor/ruby
