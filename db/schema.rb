@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140309121530) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "spree_activators", force: true do |t|
     t.string   "description"
     t.datetime "expires_at"
@@ -670,8 +673,8 @@ ActiveRecord::Schema.define(version: 20140309121530) do
     t.boolean  "is_master",                               default: false
     t.integer  "product_id"
     t.decimal  "cost_price",      precision: 8, scale: 2
-    t.string   "cost_currency"
     t.integer  "position"
+    t.string   "cost_currency"
     t.boolean  "track_inventory",                         default: true
     t.datetime "updated_at"
   end
